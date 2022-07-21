@@ -13,7 +13,7 @@ coloque nas sessões indicadas*/
 body {
     box-sizing: border-box;
     background-color: var(--cor-de-fundo) ;
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -81,7 +81,41 @@ section.menu{
 /*Sessão Title*/
 
 section.title{
+    margin-top: 1rem;
+}
 
+.title__div {
+    margin: 0 1rem;
+}
+
+.title__profile {
+    width: 98px;
+    margin: 0 0 0 1rem;
+    border-radius: 50%;
+}
+
+.title__bio {
+    font-weight: 700;
+    font-size: 1.375rem;
+}
+
+.title__subsection {
+    font-weight: 400;
+    font-size: .875rem;
+}
+
+.title__network {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0;
+}
+
+.title__network__item a {
+    color: var(--cor-de-texto);
+    font-weight: 600;
+    font-size: .875rem;
 }
 
 /*Sessão About*/
