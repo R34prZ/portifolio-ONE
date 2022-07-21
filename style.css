@@ -7,6 +7,7 @@ coloque nas sessões indicadas*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
    --cor-de-fundo: #F5F5F5;
    --cor-de-link: #000;
+   --cor-de-texto: #464646;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1;
+    color: var(--cor-de-texto);
 }
 ol, ul,li {
     list-style: none;
@@ -25,7 +27,7 @@ a{
     color: var(--cor-de-link);
 }
 
-/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
+/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso sintam a vontade 
 de utiliza-la. 
 
 Mas o que é o BEM?
@@ -41,7 +43,39 @@ https://en.bem.info/methodology/quick-start/*/
 /*Sessão Menu*/
 
 section.menu{
+    display: flex;
+    align-items: center;
+}
 
+.menu__header {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.menu__img {
+    align-self: center;
+}
+
+.menu__title {
+    margin-left: .25rem;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.menu__nav {
+    display: flex;
+    margin: 0 1rem 0 auto;
+}
+
+.menu__list {
+    display: none;
+}
+
+.menu__list__item__contato a {
+    color: var(--cor-de-texto);
+    font-size: 14px;
+    font-weight: 400;
 }
 
 /*Sessão Title*/
