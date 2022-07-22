@@ -73,6 +73,26 @@ section.menu{
     display: none;
 }
 
+.menu__list__item {
+    position: relative;
+}
+
+.menu__list__item::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #2A7AE480;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width .3s ease-in-out;
+}
+
+.menu__list__item:hover::after {
+    width: 90%;
+}
+
 .menu__list__item__contato a {
     color: var(--cor-de-texto);
     font-size: 14px;
@@ -269,6 +289,7 @@ section.experience{
 .experience__img {
     width: 100%;
     height: 144px;
+    max-width: 752px;
 }
 
 .experience__title {
@@ -435,20 +456,119 @@ utilize como referência os breakpoints @media abaixo*/
 @media screen and (min-width: 1024px) {
 
 /*Menu*/
+.menu {
+    padding: 2rem 8.375rem;
+}
+
+.menu__list {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.menu__list__item__contato {
+    display: none;
+}
 
 /*Titulo*/
+.title {
+    margin: 0;
+    padding: 2rem;
+}
+
+.title__container {
+    margin-left: 5rem;
+}
+
+.title__bio {
+    font-size: 3.25rem;
+}
+
+.title__subsection {
+    font-size: 1.375rem;
+}
+
+.title__profile {
+    width: 368px;
+}
 
 /*Sessão sobre*/
+.about {
+    padding: 4rem;
+}
+
+.about__container {
+    width: 70%;
+}
+.about__title {
+    font-size: 2rem;
+}
 
 /*Skills*/
+.skills__title {
+    font-size: 2rem;
+}
+
+.skills__box {
+    width: auto;
+    flex-grow: 1;
+}
 
 /*Hobbies*/
+.hobbies__title {
+    font-size: 2rem;
+}
+
+.hobbies__box {
+    width: auto;
+    flex-grow: 1;
+}
  
 /*Formação Acadêmica*/
+.academic {
+    padding: 4rem 0;
+}
+
+.academic__title {
+    font-size: 2rem;
+}
+
+.academic__courses {
+    display: flex;
+    justify-content: center;
+}
 
 /*Experiência Profissional*/
+.experience__section__title {
+    font-size: 2rem;
+}
+
+.experiencie__box {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 2rem;
+}
+
+.experiencie__box--reverse {
+    flex-direction: row-reverse;
+}
 
  /*Contato*/
+ .formcontato__title {
+    font-size: 2rem;
+ }
+
+ .formcontato__contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+ }
+
+ .formcontato__img {
+    display: block;
+    border-radius: 15px;
+ }
 
 /*Footer*/
 
