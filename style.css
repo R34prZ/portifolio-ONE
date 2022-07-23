@@ -353,40 +353,89 @@ section.formcontato{
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin: 1rem 2rem;
+    margin: 2rem 2rem;
+}
+
+.form__input__box {
+    position: relative;
+    width: 100%;
 }
 
 .formcontato__input {
-    width: 100%;
+    width: calc(100% - 5rem);
     background-color: #fff;
     border: none;
     outline: none;
     border-bottom: #C8C8C8 2px solid;
     height: 56px;
     padding: 0 1rem;
+    padding-left: 5rem;
     border-radius: 4px;
     color: #A2A2A2;
+    transition: padding .2s ease-in-out;
+}
+
+.formcontato__input--invalido {
+    border-bottom: #d12828 2px solid;
 }
 
 .formcontato__input:focus {
     border-bottom: #2A7AE4 2px solid;
+    color: var(--cor-de-texto);
+    padding-left: 1rem;
+}
+
+.form__label {
+    position: absolute;
+    color: #A2A2A2;
+    font-weight: 500;
+    font-size: 0.875rem;
+    left: 1rem;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: left;
+    transition: top .2s ease;
+}
+
+.form__label__erro {
+    display: block;
+    padding-top: .5rem;
+    color: #d12828;
+}
+
+.form__label--textarea {
+    top: 1rem;
+}
+
+.formcontato__input:focus ~ .form__label, .formcontato__textarea:focus ~ .form__label {
+    top: -.8rem;
+    color: var(--cor-de-texto);
 }
 
 .formcontato__textarea {
-    width: 100%;
+    width: calc(100% - 5rem);
     padding: 1.5rem 1rem;
+    padding-left: 5rem;
     resize: none;
     background-color: #fff;
     outline: none;
     border: none;
     border-bottom: #C8C8C8 2px solid;
     color: #A2A2A2;
+    transition: padding .2s ease-in-out;
 }
 
 .formcontato__textarea:focus {
     border-bottom: #2A7AE4 2px solid;
+    color: var(--cor-de-texto);
+    padding-left: 1rem;
 }
 
+.formcontato__botao:disabled {
+    opacity: .7;
+    transform: none;
+}
 
 /*footeer*/
 

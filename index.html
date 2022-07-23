@@ -270,12 +270,30 @@
                     <h3 class="formcontato__subtext">Preencha o formulário ao lado e entrarei em contato o mais
                         rápido possível. </h3>
                     <form class="formcontato__form">
-                        <input class="formcontato__input" type="text" id="nome" placeholder="Nome">
-                        <input class="formcontato__input" type="email" id="email" placeholder="Email">
-                        <input class="formcontato__input" type="text" id="assunto" placeholder="Assunto">
-                        <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensagem"
-                            placeholder="Sua mensagem"></textarea>
-                        <button class="formcontato__botao experiencia__botao">Enviar mensagem</button>
+                        <div class="form__input__box">
+                            <input class="formcontato__input" type="text" id="nome" data-tipo="nome"  minlength="1" maxlength="50" required>
+                            <label for="nome" class="form__label">Nome:</label>
+                            <label for="nome" class="form__label__erro"></label>
+                        </div>
+                        
+                        <div class="form__input__box">
+                            <input class="formcontato__input" type="email" id="email" data-tipo="email" minlength="1" pattern="[a-z0-9.]+@[a-z0-9]+\.[a-z]+[.a-z]+" required>
+                            <label for="email" class="form__label">Email:</label>
+                            <label for="email" class="form__label__erro"></label>
+                        </div>
+                        
+                        <div class="form__input__box">
+                            <input class="formcontato__input" type="text" id="assunto" data-tipo="assunto" maxlength="50" required> 
+                            <label for="assunto" class="form__label">Assunto:</label>
+                            <label for="assunto" class="form__label__erro"></label>
+                        </div>
+                        
+                        <div class="form__input__box">
+                            <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" data-tipo="mensagem" minlength="1" maxlength="300" name="mensagem"></textarea>
+                            <label for="mensagem" class="form__label--textarea form__label">Sua mensagem:</label>
+                        </div>
+                        
+                        <button class="formcontato__botao experiencia__botao" disabled>Enviar mensagem</button>
                     </form>
                 </div>
             </div>
